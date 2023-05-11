@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Spring Boot - Asgardeo Integration for Login</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" th:href="@{styles.css}"/>
+</head>
+<body>
+<div class="center">
+    <h2>Welcome Home</h2>
+    <h3>Profile Details</h3>
+    <div class="card">
+        <div class="container">
+            <p>User Name : <span th:text="${userName}"/></p>
+            <p>First Name: <span th:text="${firstName}"/></p>
+            <p>Last Name : <span th:text="${lastName}"/></p>
+            <p>Mobile : <span th:text="${phoneNumber}"/></p>
+            <p>Country : <span th:text="${country}"/></p>
+        </div>
+    </div>
+    <form action="/logout">
+        <input class="button" type="submit" value="Sign Out"/>
+    </form>
+</div>
+</body>
+</html>

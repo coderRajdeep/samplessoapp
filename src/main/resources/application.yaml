@@ -1,0 +1,14 @@
+spring:
+  security:
+    saml2:
+      relyingparty:
+        registration:
+          asgardeo-saml:
+            identityprovider:
+              entity-id: api.asgardeo.io/t/lakshia
+              verification:
+                credentials:
+                  - certificate-location: "classpath:saml-certificate/lakshia.cer"
+              singlesignon:
+                url: https://api.asgardeo.io/t/lakshia/samlsso
+                sign-request: false
