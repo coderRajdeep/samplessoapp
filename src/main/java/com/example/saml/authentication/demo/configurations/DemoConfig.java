@@ -14,8 +14,7 @@ public class DemoConfig {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        http
-                .authorizeHttpRequests(authorize -> authorize
+        http.authorizeHttpRequests(authorize -> authorize
                         .antMatchers("/", "/error","/styles.css").permitAll()
                         .anyRequest().authenticated()
                 )

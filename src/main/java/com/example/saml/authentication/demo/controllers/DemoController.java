@@ -15,13 +15,11 @@ public class DemoController {
     }
     @GetMapping("/home")
     public String home(@AuthenticationPrincipal Saml2AuthenticatedPrincipal principal, Model model) {
-
-        model.addAttribute("userName", principal.getAttribute("http://wso2.org/claims/username").get(0));
         model.addAttribute("firstName", principal.getAttribute("http://wso2.org/claims/givenname").get(0));
         model.addAttribute("lastName", principal.getAttribute("http://wso2.org/claims/lastname").get(0));
-        model.addAttribute("phoneNumber", principal.getAttribute("http://wso2.org/claims/mobile").get(0));
+        model.addAttribute("userName", principal.getAttribute("http://wso2.org/claims/userid").get(0));
+        model.addAttribute("emailaddress", principal.getAttribute("http://wso2.org/claims/emailaddress").get(0));
         model.addAttribute("country", principal.getAttribute("http://wso2.org/claims/country").get(0));
-
         return "home";
     }
 }

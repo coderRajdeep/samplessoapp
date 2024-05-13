@@ -5,10 +5,10 @@ spring:
         registration:
           asgardeo-saml:
             identityprovider:
-              entity-id: api.asgardeo.io/t/lakshia
+              entity-id: api.asgardeo.io/t/samplewebapp
               verification:
                 credentials:
-                  - certificate-location: "classpath:saml-certificate/lakshia.cer"
+                  - certificate-location: "classpath:saml-certificate/samplewebapp.cer"
               singlesignon:
-                url: https://api.asgardeo.io/t/lakshia/samlsso
+                url: https://api.asgardeo.io/t/samplewebapp/samlsso
                 sign-request: false
